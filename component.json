@@ -1,8 +1,8 @@
 {
-  "name": "point",
+  "name": "vector",
   "version": "0.0.1",
-  "description": "Point component",
-  "keywords": ["point", "canvas"],
+  "description": "Vector component",
+  "keywords": ["vector", "canvas"],
   "scripts": ["index.js"],
   "dependencies": {},
   "development": {

@@ -1,11 +1,11 @@
 {
-  "name": "point-component",
+  "name": "vector-component",
   "version": "0.0.1",
-  "description": "Point",
-  "keywords": ["point"],
+  "description": "Vector",
+  "keywords": ["vector"],
   "component": {
     "scripts": {
-      "point/index.js": "index.js"
+      "vector/index.js": "index.js"
     }
   }
 }

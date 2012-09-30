@@ -1,104 +1,104 @@
 
 /**
- * Expose `Point`.
+ * Expose `Vector`.
  */
 
-module.exports = Point;
+module.exports = Vector;
 
 /**
- * Initialize a new `Point` with x / y.
+ * Initialize a new `Vector` with x / y.
  *
  * @param {Number} x
  * @param {Number} y
  * @api public
  */
 
-function Point(x, y) {
-  if (!(this instanceof Point)) return new Point(x, y);
+function Vector(x, y) {
+  if (!(this instanceof Vector)) return new Vector(x, y);
   this.x = x;
   this.y = y;
 }
 
 /**
- * Return a negated point.
+ * Return a negated vector.
  *
- * @return {Point}
+ * @return {Vector}
  * @api public
  */
 
-Point.prototype.negate = function(){
-  return new Point(-this.x, -this.y);
+Vector.prototype.negate = function(){
+  return new Vector(-this.x, -this.y);
 };
 
 /**
  * Add x / y.
  *
- * @param {Point} p
- * @return {Point} new point
+ * @param {Vector} p
+ * @return {Vector} new vector
  * @api public
  */
 
-Point.prototype.add = function(p){
-  return new Point(this.x + p.x, this.y + p.y);
+Vector.prototype.add = function(p){
+  return new Vector(this.x + p.x, this.y + p.y);
 };
 
 /**
  * Sub x / y.
  *
- * @param {Point} p
- * @return {Point} new point
+ * @param {Vector} p
+ * @return {Vector} new vector
  * @api public
  */
 
-Point.prototype.sub = function(p){
-  return new Point(this.x - p.x, this.y - p.y);
+Vector.prototype.sub = function(p){
+  return new Vector(this.x - p.x, this.y - p.y);
 };
 
 /**
  * Multiply x / y.
  *
- * @param {Point} p
- * @return {Point} new point
+ * @param {Vector} p
+ * @return {Vector} new vector
  * @api public
  */
 
-Point.prototype.mul = function(p){
-  return new Point(this.x * p.x, this.y * p.y);
+Vector.prototype.mul = function(p){
+  return new Vector(this.x * p.x, this.y * p.y);
 };
 
 /**
  * Divide x / y.
  *
- * @param {Point} p
- * @return {Point} new point
+ * @param {Vector} p
+ * @return {Vector} new vector
  * @api public
  */
 
-Point.prototype.div = function(p){
-  return new Point(this.x / p.x, this.y / p.y);
+Vector.prototype.div = function(p){
+  return new Vector(this.x / p.x, this.y / p.y);
 };
 
 /**
- * Check if these points are the same.
+ * Check if these vectors are the same.
  *
- * @param {Point} p
+ * @param {Vector} p
  * @return {Boolean}
  * @api public
  */
 
-Point.prototype.equals = function(p){
+Vector.prototype.equals = function(p){
   return this.x == p.x && this.y == p.y;
 };
 
 /**
- * Return a clone of this point.
+ * Return a clone of this vector.
  *
- * @return {Point} new point
+ * @return {Vector} new vector
  * @api public
  */
 
-Point.prototype.clone = function(){
-  return new Point(this.x, this.y);
+Vector.prototype.clone = function(){
+  return new Vector(this.x, this.y);
 };
 
 /**
@@ -108,7 +108,7 @@ Point.prototype.clone = function(){
  * @api public
  */
 
-Point.prototype.angle = function(){
+Vector.prototype.angle = function(){
   return Math.atan2(this.x, this.y);
 };
 
@@ -119,19 +119,19 @@ Point.prototype.angle = function(){
  * @api public
  */
 
-Point.prototype.degrees = function(){
+Vector.prototype.degrees = function(){
   return this.angle() * 180 / Math.PI;
 };
 
 /**
- * Return the distance between points.
+ * Return the distance between vectors.
  *
- * @param {Point} p
+ * @param {Vector} p
  * @return {Number}
  * @api public
  */
 
-Point.prototype.distance = function(p){
+Vector.prototype.distance = function(p){
   var x = this.x - p.x;
   var y = this.y - p.y;
   return Math.sqrt(x * x + y * y);
@@ -144,7 +144,7 @@ Point.prototype.distance = function(p){
  * @api public
  */
 
-Point.prototype.toString = function(){
+Vector.prototype.toString = function(){
   return '(' + this.x + ', ' + this.y + ')';
 };
 
