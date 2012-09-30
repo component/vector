@@ -1,0 +1,11 @@
+{
+  "name": "point-component",
+  "version": "0.0.1",
+  "description": "Point",
+  "keywords": ["point"],
+  "component": {
+    "scripts": {
+      "point/index.js": "index.js"
+    }
+  }
+}

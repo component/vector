@@ -1,0 +1,11 @@
+{
+  "name": "point",
+  "version": "0.0.1",
+  "description": "Point component",
+  "keywords": ["point", "canvas"],
+  "scripts": ["index.js"],
+  "dependencies": {},
+  "development": {
+    "component/assert": "*"
+  }
+}
