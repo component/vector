@@ -38,8 +38,8 @@ Vector.prototype.negate = function(){
  * @api public
  */
 
-Vector.prototype.add = function(p){
-  return new Vector(this.x + p.x, this.y + p.y);
+Vector.prototype.add = function(v){
+  return new Vector(this.x + v.x, this.y + v.y);
 };
 
 /**
@@ -50,8 +50,8 @@ Vector.prototype.add = function(p){
  * @api public
  */
 
-Vector.prototype.sub = function(p){
-  return new Vector(this.x - p.x, this.y - p.y);
+Vector.prototype.sub = function(v){
+  return new Vector(this.x - v.x, this.y - v.y);
 };
 
 /**
@@ -62,8 +62,8 @@ Vector.prototype.sub = function(p){
  * @api public
  */
 
-Vector.prototype.mul = function(p){
-  return new Vector(this.x * p.x, this.y * p.y);
+Vector.prototype.mul = function(v){
+  return new Vector(this.x * v.x, this.y * v.y);
 };
 
 /**
@@ -74,8 +74,8 @@ Vector.prototype.mul = function(p){
  * @api public
  */
 
-Vector.prototype.div = function(p){
-  return new Vector(this.x / p.x, this.y / p.y);
+Vector.prototype.div = function(v){
+  return new Vector(this.x / v.x, this.y / v.y);
 };
 
 /**
@@ -86,8 +86,8 @@ Vector.prototype.div = function(p){
  * @api public
  */
 
-Vector.prototype.equals = function(p){
-  return this.x == p.x && this.y == p.y;
+Vector.prototype.equals = function(v){
+  return this.x == v.x && this.y == v.y;
 };
 
 /**
@@ -131,9 +131,9 @@ Vector.prototype.degrees = function(){
  * @api public
  */
 
-Vector.prototype.distance = function(p){
-  var x = this.x - p.x;
-  var y = this.y - p.y;
+Vector.prototype.distance = function(v){
+  var x = this.x - v.x;
+  var y = this.y - v.y;
   return Math.sqrt(x * x + y * y);
 };
 
