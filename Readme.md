@@ -1,12 +1,12 @@
 
-# point
+# vector
 
-  `Point` object for canvas etc.
+  `Vector` object for canvas etc.
 
 ## Installation
 
 ```
-$ component install component/point
+$ component install component/vector
 ```
 
 ## Example
