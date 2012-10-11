@@ -12,18 +12,18 @@ $ component install component/point
 ## Example
 
 ```js
-var Point = require('point');
-var a = new Point(5, 5);
-var b = new Point(10, 10);
+var Vector = require('vector');
+var a = new Vector(5, 5);
+var b = new Vector(10, 10);
 a.distance(b);
 ```
 
   or without `new`:
 
 ```js
-var p = require('point');
-var a = p(5, 5);
-var b = p(10, 10);
+var vec = require('vector');
+var a = vec(5, 5);
+var b = vec(10, 10);
 a.distance(b);
 ```
 
