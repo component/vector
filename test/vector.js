@@ -96,6 +96,24 @@ describe('Vector(x, y)', function(){
     })
   })
 
+  describe('#interpolated(v, a)', function(){
+    it('should return linear interpolation between vectors', function(){
+      var a = Vector(10, 10);
+      var b = a.interpolated(Vector(20, 20), .3);
+      assert(13 == b.x && 13 == b.y);
+      b = a.interpolated(Vector(12, 18), .93);
+      assert('11.86' == b.x.toFixed(2) && '17.44' == b.y.toFixed(2));
+    })
+  })
+
+  describe('#middle(v)', function(){
+    it('should return the middle point between vectors', function(){
+      var a = Vector(10, 10);
+      var b = a.middle(Vector(20, 20));
+      assert(15 == b.x && 15 == b.y);
+    })
+  })
+
   describe('#toString()', function(){
     it('should return a string representation', function(){
       var p = new Vector(15, 30);
