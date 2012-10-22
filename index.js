@@ -126,7 +126,7 @@ Vector.prototype.degrees = function(){
 /**
  * Return the distance between vectors.
  *
- * @param {Vector} p
+ * @param {Vector} v
  * @return {Number}
  * @api public
  */
@@ -135,6 +135,31 @@ Vector.prototype.distance = function(v){
   var x = this.x - v.x;
   var y = this.y - v.y;
   return Math.sqrt(x * x + y * y);
+};
+
+/**
+ * Return the linear interpolation between vectors given a step point.
+ *
+ * @param {Vector} v
+ * @param {Number} a
+ * @return {Vector}
+ * @api public
+ */
+
+Vector.prototype.interpolated = function(v, a){
+  return new Vector(this.x * (1 - a) + v.x * a, this.y * (1 - a) + v.y * a);
+};
+
+/**
+ * Return the middle position between vectors.
+ *
+ * @param {Vector} v
+ * @return {Vector}
+ * @api public
+ */
+
+Vector.prototype.middle = function(v){
+  return this.interpolated(v, .5);
 };
 
 /**

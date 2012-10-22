@@ -73,6 +73,14 @@ a.distance(b);
 
   Return the distance between vectors.
 
+### Vector#interpolated(v:Vector, s:Number)
+
+  Return the linear interpolation between vectors given a step point.
+
+### Vector#middle(v:Vector)
+
+  Return the middle position between vectors.
+
 ### Vector#toString()
 
   Return "(x, y)" string representation.
