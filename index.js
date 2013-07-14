@@ -138,6 +138,17 @@ Vector.prototype.distance = function(v){
 };
 
 /**
+ * Return the magnitude of vector.
+ *
+ * @return {Number}
+ * @api public
+ */
+
+Vector.prototype.magnitude = function(){
+  return Math.sqrt(this.x * this.x + this.y * this.y);
+};
+
+/**
  * Return the linear interpolation between vectors given a step point.
  *
  * @param {Vector} v
@@ -160,6 +171,33 @@ Vector.prototype.interpolated = function(v, a){
 
 Vector.prototype.middle = function(v){
   return this.interpolated(v, .5);
+};
+
+/**
+ * Return the dot product between vectors.
+ *
+ * @param {Vector} v
+ * @return {Number}
+ * @api public
+ */
+
+Vector.prototype.dot = function(v) {
+  return this.x * v.x + this.y * v.y;
+};
+
+/**
+ * Return the angle between vectors in radians.
+ *
+ * @param {Vector} v
+ * @return {Number}
+ * @api public
+ */
+
+Vector.prototype.angleBetween = function(v){
+  var dot = this.dot(v);
+  var magA = this.magnitude();
+  var magB = v.magnitude();
+  return Math.acos(dot / (magA * magB))
 };
 
 /**
