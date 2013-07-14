@@ -73,6 +73,10 @@ a.distance(b);
 
   Return the distance between vectors.
 
+### Vector#magnitude()
+
+  Return the magnitude of this vector
+
 ### Vector#interpolated(v:Vector, s:Number)
 
   Return the linear interpolation between vectors given a step point.
@@ -80,6 +84,14 @@ a.distance(b);
 ### Vector#middle(v:Vector)
 
   Return the middle position between vectors.
+
+### Vector#dot(v:Vector)
+
+  Return the dot product between vectors.
+
+### Vector#angleBetween(v:Vector)
+
+  Return the angle between vectors in radians.
 
 ### Vector#toString()
 

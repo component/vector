@@ -138,7 +138,7 @@ Vector.prototype.distance = function(v){
 };
 
 /**
- * Return the magnitude of vector.
+ * Return the magnitude of this vector.
  *
  * @return {Number}
  * @api public
