@@ -2,10 +2,16 @@
   "name": "vector-component",
   "version": "0.0.1",
   "description": "Vector",
-  "keywords": ["vector"],
+  "keywords": [
+    "vector"
+  ],
   "component": {
     "scripts": {
       "vector/index.js": "index.js"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/component/vector.git"
   }
 }
