@@ -85,6 +85,16 @@ describe('Vector(x, y)', function(){
       assert('11.3' == a.distance(b).toFixed(1));
     })
   })
+  
+  describe('#magnitude()', function(){
+    it('should return the magnitude of vector', function(){
+      var a = Vector(1, 1);
+      assert('1.41' == a.magnitude().toFixed(2));
+      
+      var b = Vector(0, 0);
+      assert(0 == b.magnitude());
+    })
+  })
 
   describe('#equals(p)', function(){
     it('should check if the vectors are equivalent', function(){
@@ -111,6 +121,28 @@ describe('Vector(x, y)', function(){
       var a = Vector(10, 10);
       var b = a.middle(Vector(20, 20));
       assert(15 == b.x && 15 == b.y);
+    })
+  })
+  
+  describe('#dot(v)', function(){
+    it('should return the dot product between vectors', function(){
+      var a = Vector(-10, 10);
+      var b = Vector(10, 10);
+      var c = Vector(10, 5);
+      var dotB = a.dot(b);
+      var dotC = a.dot(c);
+      assert(dotB == 0);
+      assert(dotC == -50);
+    })
+  })
+  
+  describe('#angleBetween(v)', function(){
+    it('should return the angle between vectors', function(){
+      var a = Vector(-10, 10);
+      var b = Vector(10, 10);
+      var angle = a.angleBetween(b);
+      var degree = Math.round(angle * 180 / Math.PI);
+      assert(degree == 90);
     })
   })
 
